@@ -1,5 +1,4 @@
 class InstallPgAuditLog < ActiveRecord::Migration
-
   def self.up
     PgAuditLog::Entry.install
     PgAuditLog::Function.install
