@@ -1,11 +1,11 @@
 class InstallPgAuditLog < ActiveRecord::Migration
-  def self.up
+  def up
     PgAuditLog::Entry.install
     PgAuditLog::Function.install
     PgAuditLog::Triggers.install
   end
 
-  def self.down
+  def down
     PgAuditLog::Triggers.uninstall
     PgAuditLog::Function.uninstall
     PgAuditLog::Entry.uninstall
